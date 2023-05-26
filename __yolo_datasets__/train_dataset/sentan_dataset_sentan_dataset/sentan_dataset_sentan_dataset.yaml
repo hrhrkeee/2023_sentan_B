@@ -1,0 +1,9 @@
+path:  ../__datasets__/train_dataset/
+train: sentan_dataset_sentan_dataset/images
+val:   sentan_dataset_sentan_dataset/images
+test:  sentan_dataset_sentan_dataset/images
+
+nc: 2
+names: 
+  0:
+  1: grape_leaf

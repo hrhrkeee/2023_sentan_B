@@ -4,7 +4,7 @@
             "id": 4235,
             "dataset_id": 14,
             "category_ids": [
-                13
+                1
             ],
             "path": "/datasets/sentan_dataset01/NON0339_0132.jpg",
             "width": 960,
@@ -48,7 +48,7 @@
             "id": 4248,
             "dataset_id": 14,
             "category_ids": [
-                13
+                1
             ],
             "path": "/datasets/sentan_dataset01/NON0339_0121.jpg",
             "width": 960,
@@ -98,7 +98,7 @@
             "id": 4312,
             "dataset_id": 14,
             "category_ids": [
-                13
+                1
             ],
             "path": "/datasets/sentan_dataset01/NON0339_0495.jpg",
             "width": 960,
@@ -117,7 +117,7 @@
             "id": 4338,
             "dataset_id": 14,
             "category_ids": [
-                13
+                1
             ],
             "path": "/datasets/sentan_dataset01/NON0339_0077.jpg",
             "width": 960,
@@ -317,7 +317,7 @@
             "id": 4339,
             "dataset_id": 14,
             "category_ids": [
-                13
+                1
             ],
             "path": "/datasets/sentan_dataset01/NON0339_0165.jpg",
             "width": 960,
@@ -367,7 +367,7 @@
             "id": 4341,
             "dataset_id": 14,
             "category_ids": [
-                13
+                1
             ],
             "path": "/datasets/sentan_dataset01/NON0339_0341.jpg",
             "width": 960,
@@ -393,7 +393,7 @@
             "id": 4343,
             "dataset_id": 14,
             "category_ids": [
-                13
+                1
             ],
             "path": "/datasets/sentan_dataset01/NON0339_0099.jpg",
             "width": 960,
@@ -560,58 +560,10 @@
             "is_modified": false
         },
         {
-            "id": 4350,
-            "dataset_id": 14,
-            "category_ids": [],
-            "path": "/datasets/sentan_dataset01/NON0339_0242.jpg",
-            "width": 960,
-            "height": 1280,
-            "file_name": "NON0339_0242.jpg",
-            "annotated": false,
-            "annotating": [],
-            "num_annotations": 0,
-            "metadata": {},
-            "milliseconds": 0,
-            "events": [
-                {
-                    "_cls": "SessionEvent",
-                    "user": "suzuki",
-                    "milliseconds": 0,
-                    "tools_used": []
-                }
-            ],
-            "regenerate_thumbnail": false,
-            "is_modified": false
-        },
-        {
-            "id": 4355,
-            "dataset_id": 14,
-            "category_ids": [],
-            "path": "/datasets/sentan_dataset01/NON0339_0451.jpg",
-            "width": 960,
-            "height": 1280,
-            "file_name": "NON0339_0451.jpg",
-            "annotated": false,
-            "annotating": [],
-            "num_annotations": 0,
-            "metadata": {},
-            "milliseconds": 2307757,
-            "events": [
-                {
-                    "_cls": "SessionEvent",
-                    "user": "cs20503",
-                    "milliseconds": 2307757,
-                    "tools_used": []
-                }
-            ],
-            "regenerate_thumbnail": false,
-            "is_modified": false
-        },
-        {
             "id": 4387,
             "dataset_id": 14,
             "category_ids": [
-                13
+                1
             ],
             "path": "/datasets/sentan_dataset01/NON0339_0088.jpg",
             "width": 960,
@@ -739,7 +691,7 @@
             "id": 4388,
             "dataset_id": 14,
             "category_ids": [
-                13
+                1
             ],
             "path": "/datasets/sentan_dataset01/NON0339_0110.jpg",
             "width": 960,
@@ -794,7 +746,7 @@
     ],
     "categories": [
         {
-            "id": 13,
+            "id": 1,
             "name": "grape_leaf",
             "supercategory": "",
             "color": "#00ff00",
@@ -807,7 +759,7 @@
         {
             "id": 3868,
             "image_id": 4235,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -914,7 +866,7 @@
         {
             "id": 3870,
             "image_id": 4235,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -980,7 +932,7 @@
         {
             "id": 3770,
             "image_id": 4248,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -1482,7 +1434,7 @@
         {
             "id": 3771,
             "image_id": 4248,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -2050,7 +2002,7 @@
         {
             "id": 3781,
             "image_id": 4248,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -2346,7 +2298,7 @@
         {
             "id": 3792,
             "image_id": 4248,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -2796,7 +2748,7 @@
         {
             "id": 3796,
             "image_id": 4248,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -3370,7 +3322,7 @@
         {
             "id": 3801,
             "image_id": 4248,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -3648,7 +3600,7 @@
         {
             "id": 3822,
             "image_id": 4248,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -4014,7 +3966,7 @@
         {
             "id": 3834,
             "image_id": 4248,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -4230,7 +4182,7 @@
         {
             "id": 3838,
             "image_id": 4248,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -4392,7 +4344,7 @@
         {
             "id": 3842,
             "image_id": 4248,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -4536,7 +4488,7 @@
         {
             "id": 3844,
             "image_id": 4248,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -4638,7 +4590,7 @@
         {
             "id": 3847,
             "image_id": 4248,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -4752,7 +4704,7 @@
         {
             "id": 3851,
             "image_id": 4248,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -4900,7 +4852,7 @@
         {
             "id": 3999,
             "image_id": 4312,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -5244,7 +5196,7 @@
         {
             "id": 4002,
             "image_id": 4312,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -5524,7 +5476,7 @@
         {
             "id": 4006,
             "image_id": 4312,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -5952,7 +5904,7 @@
         {
             "id": 3744,
             "image_id": 4338,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -6214,7 +6166,7 @@
         {
             "id": 3760,
             "image_id": 4338,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -6328,7 +6280,7 @@
         {
             "id": 3794,
             "image_id": 4338,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -6658,7 +6610,7 @@
         {
             "id": 3797,
             "image_id": 4338,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -6782,7 +6734,7 @@
         {
             "id": 3799,
             "image_id": 4338,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -6886,7 +6838,7 @@
         {
             "id": 3804,
             "image_id": 4338,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -6978,7 +6930,7 @@
         {
             "id": 3807,
             "image_id": 4338,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -7047,7 +6999,7 @@
         {
             "id": 3808,
             "image_id": 4338,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -7122,7 +7074,7 @@
         {
             "id": 3809,
             "image_id": 4338,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -7360,7 +7312,7 @@
         {
             "id": 3815,
             "image_id": 4338,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -7507,7 +7459,7 @@
         {
             "id": 3818,
             "image_id": 4338,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -7693,7 +7645,7 @@
         {
             "id": 3821,
             "image_id": 4338,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -7799,7 +7751,7 @@
         {
             "id": 3829,
             "image_id": 4338,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -7932,7 +7884,7 @@
         {
             "id": 3840,
             "image_id": 4338,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -8072,7 +8024,7 @@
         {
             "id": 3846,
             "image_id": 4338,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -8205,7 +8157,7 @@
         {
             "id": 3864,
             "image_id": 4338,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -8288,7 +8240,7 @@
         {
             "id": 3688,
             "image_id": 4339,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -8905,7 +8857,7 @@
         {
             "id": 3693,
             "image_id": 4339,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -9195,7 +9147,7 @@
         {
             "id": 3699,
             "image_id": 4339,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -9431,7 +9383,7 @@
         {
             "id": 3701,
             "image_id": 4339,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -9627,7 +9579,7 @@
         {
             "id": 3709,
             "image_id": 4339,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -9879,7 +9831,7 @@
         {
             "id": 3711,
             "image_id": 4339,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -10173,7 +10125,7 @@
         {
             "id": 3722,
             "image_id": 4339,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -10413,7 +10365,7 @@
         {
             "id": 3751,
             "image_id": 4339,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -10603,7 +10555,7 @@
         {
             "id": 3754,
             "image_id": 4339,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -10807,7 +10759,7 @@
         {
             "id": 3759,
             "image_id": 4339,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -10982,7 +10934,7 @@
         {
             "id": 3761,
             "image_id": 4339,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -11072,7 +11024,7 @@
         {
             "id": 3762,
             "image_id": 4339,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -11286,7 +11238,7 @@
         {
             "id": 3765,
             "image_id": 4339,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -11430,7 +11382,7 @@
         {
             "id": 3998,
             "image_id": 4341,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -11668,7 +11620,7 @@
         {
             "id": 4001,
             "image_id": 4341,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -11929,7 +11881,7 @@
         {
             "id": 4003,
             "image_id": 4341,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -12118,7 +12070,7 @@
         {
             "id": 4009,
             "image_id": 4341,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -12270,7 +12222,7 @@
         {
             "id": 3777,
             "image_id": 4343,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -12490,7 +12442,7 @@
         {
             "id": 3780,
             "image_id": 4343,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -12793,7 +12745,7 @@
         {
             "id": 3784,
             "image_id": 4343,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -12971,7 +12923,7 @@
         {
             "id": 3786,
             "image_id": 4343,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -13177,7 +13129,7 @@
         {
             "id": 3789,
             "image_id": 4343,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -13325,7 +13277,7 @@
         {
             "id": 3791,
             "image_id": 4343,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -13502,7 +13454,7 @@
         {
             "id": 3795,
             "image_id": 4343,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -13681,7 +13633,7 @@
         {
             "id": 3798,
             "image_id": 4343,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -13836,7 +13788,7 @@
         {
             "id": 3802,
             "image_id": 4343,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -14052,7 +14004,7 @@
         {
             "id": 3810,
             "image_id": 4343,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -14229,7 +14181,7 @@
         {
             "id": 3813,
             "image_id": 4343,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -14403,7 +14355,7 @@
         {
             "id": 3816,
             "image_id": 4343,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -14572,7 +14524,7 @@
         {
             "id": 3837,
             "image_id": 4343,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -14686,7 +14638,7 @@
         {
             "id": 3841,
             "image_id": 4343,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -15021,7 +14973,7 @@
         {
             "id": 3850,
             "image_id": 4343,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -15171,7 +15123,7 @@
         {
             "id": 3997,
             "image_id": 4387,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -16185,7 +16137,7 @@
         {
             "id": 4004,
             "image_id": 4387,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -16649,7 +16601,7 @@
         {
             "id": 3696,
             "image_id": 4388,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
@@ -16898,7 +16850,7 @@
         {
             "id": 3713,
             "image_id": 4388,
-            "category_id": 13,
+            "category_id": 1,
             "dataset_id": 14,
             "segmentation": [
                 [
