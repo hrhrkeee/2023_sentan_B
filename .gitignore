@@ -8,9 +8,11 @@ output/*
 20230615_yolov8/yolov8n.pt
 __d2_dataset__/**
 __d2_output__/**
-
-
-
+20230608_detectron2/__datasets__/*
+20230608_detectron2/__yolo_datasets__/*
+20230608_detectron2/detectron2/*
+20230608_detectron2/super-gradients/*
+20230608_detectron2/sentan_dataset01/*
 
 
 # Byte-compiled / optimized / DLL files
