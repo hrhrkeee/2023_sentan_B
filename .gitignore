@@ -1,5 +1,17 @@
 # add
 output/*
+20230615_yolov8/__output_yolov8__/*
+20230615_yolov8/dataset/*
+20230615_yolov8/models/*
+20230615_yolov8/sample_data/*
+20230615_yolov8/yolo_datasets/*
+20230615_yolov8/yolov8n.pt
+__d2_dataset__/**
+__d2_output__/**
+
+
+
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
