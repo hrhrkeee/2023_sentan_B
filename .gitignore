@@ -1,5 +1,19 @@
 # add
 output/*
+20230615_yolov8/__output_yolov8__/*
+20230615_yolov8/dataset/*
+20230615_yolov8/models/*
+20230615_yolov8/sample_data/*
+20230615_yolov8/yolo_datasets/*
+20230615_yolov8/yolov8n.pt
+__d2_dataset__/**
+__d2_output__/**
+20230608_detectron2/__datasets__/*
+20230608_detectron2/__yolo_datasets__/*
+20230608_detectron2/detectron2/*
+20230608_detectron2/super-gradients/*
+20230608_detectron2/sentan_dataset01/*
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
