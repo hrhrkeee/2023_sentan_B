@@ -13,7 +13,7 @@ __d2_output__/**
 20230608_detectron2/detectron2/*
 20230608_detectron2/super-gradients/*
 20230608_detectron2/sentan_dataset01/*
-
+!20230615_yolov8\yolo_datasets\sentan_dataset
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
