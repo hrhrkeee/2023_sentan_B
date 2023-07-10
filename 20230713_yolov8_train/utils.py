@@ -1,4 +1,4 @@
-import cv2, shutil, yaml, requests, tempfile
+import cv2, shutil, yaml, requests, tempfile, torch
 import kwcoco
 import numpy as np
 import matplotlib.pyplot as plt
@@ -81,13 +81,10 @@ class YOLO_dataset:
                     if len(seg) > 0:
                         masks.append(seg)
 
-        print(masks)
-        data["labels"] = labels
-        data["bboxes"] = np.array(bboxes, dtype=float)
+        data["labels"]    = labels
+        data["bboxes"]    = np.array(bboxes, dtype=float)
         data["keypoints"] = np.array(keypoints, dtype=float)
-
-        # TODO: マスクの処理（画像2bitで出力）
-        # data["masks"]     = np.array(keypoints, dtype=float)
+        data["masks"]     = self._get_mask_img(masks, img.shape)
         
         return data
         
@@ -102,6 +99,16 @@ class YOLO_dataset:
             raise StopIteration()
         self.current += 1
         return self[self.current-1]
+    
+    def _get_mask_img(self, masks, img_shape) -> np.ndarray:
+        mask_img = np.zeros((img_shape[0], img_shape[1]), dtype=np.uint8)
+
+        masks = [np.array(p).reshape((-1,2)).astype(np.int32) for p in masks]
+        mask_img = cv2.fillPoly(mask_img, masks, color=1)
+        print(mask_img.shape)
+
+        mask_img = torch.from_numpy(mask_img)
+        return mask_img
 
 def show_img(img, title=None):
     fig, ax = plt.subplots(nrows=1, ncols=1, dpi=150)
