@@ -1,4 +1,4 @@
-path:  /home/dnn20/hirahara/2023_sentan_B/20230713_yolov8_train/dataset/nakaizu_stem_night_s-20_k2b
+path:  /Users/hirahara/Documents/Python Scripts/sentan2023/20230713_yolov8_train/dataset/nakaizu_stem_night_s-20_k2b
 train: train/images
 val:   valid/images
 test:  test/images
