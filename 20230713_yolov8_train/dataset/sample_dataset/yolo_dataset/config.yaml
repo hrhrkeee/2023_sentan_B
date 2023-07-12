@@ -3,8 +3,7 @@ train: train/images
 val:   valid/images
 test:  test/images
 
-nc: 2
+nc: 1
 
 names:
   0:
-  1: grape_leaf
