@@ -1,0 +1,10 @@
+path:  sentan-B_ball_detection_yolo
+train: train/images
+val: train/images
+
+nc: 3
+
+names:
+  0:
+  1: Ball
+  2: Board
