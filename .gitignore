@@ -20,6 +20,8 @@ __d2_output__/**
 !20230713_yolov8_train/dataset/sample_dataset/**
 !20230713_yolov8_train/dataset/mask_yolo_dataset
 !20230713_yolov8_train/dataset/mask_yolo_dataset/**
+!20230713_yolov8_train/output/yolov8/20230713-1206_yolov8n_mask_yolo_dataset
+!20230713_yolov8_train/output/yolov8/20230713-1206_yolov8n_mask_yolo_dataset/**
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
