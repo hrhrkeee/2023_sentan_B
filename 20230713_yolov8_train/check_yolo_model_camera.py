@@ -4,7 +4,7 @@ from PIL import Image
 from io import BytesIO
 from ultralytics import YOLO
 
-model = YOLO(f"./output/yolov8/20230713-1206_yolov8n_mask_yolo_dataset/weights/best.pt")
+model = YOLO(f"./output/yolov8/20230713-1353_yolov8n_sentan-B_ball_detection_yolo3/weights/best.pt")
 
 cap = cv2.VideoCapture(0)
 assert cap.isOpened(), 'Could not open video device'
