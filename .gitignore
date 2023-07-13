@@ -22,6 +22,8 @@ __d2_output__/**
 !20230713_yolov8_train/dataset/mask_yolo_dataset/**
 !20230713_yolov8_train/output/yolov8/20230713-1206_yolov8n_mask_yolo_dataset
 !20230713_yolov8_train/output/yolov8/20230713-1206_yolov8n_mask_yolo_dataset/**
+!20230713_yolov8_train/dataset/sentan-B_ball_detection_coco
+!20230713_yolov8_train/dataset/sentan-B_ball_detection_coco/**
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

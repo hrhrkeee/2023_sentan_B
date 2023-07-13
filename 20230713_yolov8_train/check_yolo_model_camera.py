@@ -16,7 +16,7 @@ try:
         if ret:
             result = model(
                 source    = frame,
-                conf      = 0.5,
+                conf      = 0.4,
                 iou       = 0.001,
                 save      = False,
                 max_det   = 300,
