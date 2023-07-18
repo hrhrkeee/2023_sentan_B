@@ -38,6 +38,7 @@ class Polar_Coordinate :
     def __str__(self) -> str:
         return "r:{}, θ:{}".format(self.r, self.θ)
 
+
 class DartboardEvaluator:
     def __init__(self, yolo_model_path):
         
@@ -77,8 +78,6 @@ class DartboardEvaluator:
 
 
     def __call__(self, input_img:np.ndarray) -> int:
-        print("__call__")
-
         total_score = 0
 
         self.detect(input_img)
@@ -94,7 +93,6 @@ class DartboardEvaluator:
 
         for ball in balls:
             polar_coordinate = self.ball_coordinate_detect(board, ball)
-            print(polar_coordinate)
             total_score += self.score_calculate(polar_coordinate)
 
         return total_score
