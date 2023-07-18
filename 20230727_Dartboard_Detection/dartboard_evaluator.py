@@ -6,6 +6,38 @@ from ultralytics import YOLO
 from pathlib import Path
 
 
+# ボードの (x,y) 座標と半径Rを保存するインスタンスを生成するクラス
+class Board_Info :
+    def __init__(self , arg_x : int , arg_y : int , arg_radius : int) :
+        self.x = arg_x
+        self.y = arg_y
+        self.radius = arg_radius
+
+    def __str__(self) -> str:
+        return "x:{}, y:{}, radius:{}".format(self.x, self.y, self.radius)
+        
+# ボール中心の (x,y) 座標を保存するインスタンスを生成するクラス
+class Ball_Info :
+    def __init__(self , arg_x : int , arg_y : int) :
+        self.x = arg_x
+        self.y = arg_y
+
+    def __str__(self) -> str:
+        return "x:{}, y:{}".format(self.x, self.y)
+
+# ボールの (r,θ) 極座標を保存するインスタンスを生成するクラス
+class Polar_Coordinate :
+    def __init__(self , arg_r : float , arg_θ : float) :
+        self.r = arg_r
+
+        # ball_radianが0~360の範囲に収まるようにする
+        if arg_θ < 0 or arg_θ > 360:
+            arg_θ %= 360
+        self.θ = arg_θ
+
+    def __str__(self) -> str:
+        return "r:{}, θ:{}".format(self.r, self.θ)
+
 class DartboardEvaluator:
     def __init__(self, yolo_model_path):
         
@@ -54,15 +86,16 @@ class DartboardEvaluator:
         if self.result is None:
             raise Exception("YOLOv8の検出結果がありません。")
 
-        board_bbox  = self.get_board_bbox()
-        if board_bbox is None:
+        board  = self.get_board()
+        if board is None:
             return None
         
-        ball_bboxes = self.get_ball_bboxes()
+        balls = self.get_balls()
 
-        for ball_bbox in ball_bboxes:
-            ball_distance, ball_radian = self.ball_coordinate_detect(board_bbox, ball_bbox)
-            total_score += self.score_calculate(ball_distance, ball_radian)
+        for ball in balls:
+            polar_coordinate = self.ball_coordinate_detect(board, ball)
+            print(polar_coordinate)
+            total_score += self.score_calculate(polar_coordinate)
 
         return total_score
 
@@ -78,25 +111,39 @@ class DartboardEvaluator:
             )
         return self.result
 
-    def get_board_bbox(self):
+    def get_board(self):
         boxes = self.result[0].boxes.data.tolist()
 
         try:
             board_bbox = [i[:4] for i in boxes if i[5] == self.board_label_key][0]
         except:
             return None
+    
+        board_center_x = (board_bbox[0] + board_bbox[2]) / 2
+        board_center_y = (board_bbox[1] + board_bbox[3]) / 2
+        board_radius = board_bbox[2] - board_center_x
+        
+        board = Board_Info(board_center_x , board_center_y , board_radius)
 
-        return board_bbox
+        return board
 
-    def get_ball_bboxes(self):
+    def get_balls(self):
+        balls = []
         boxes = self.result[0].boxes.data.tolist()
         
         try:
             ball_bboxes = [i[:4] for i in boxes if i[5] == self.ball_label_key]
         except:
             return None
+        
+        for ball_bbox in ball_bboxes:
+            ball_center_x = (ball_bbox[0] + ball_bbox[2]) / 2
+            ball_center_y = (ball_bbox[1] + ball_bbox[3]) / 2
 
-        return ball_bboxes
+            ball = Ball_Info(ball_center_x , ball_center_y)
+            balls.append(ball)
+
+        return balls
 
     def get_visualized_img(self):
         if self.result is None:
@@ -104,9 +151,39 @@ class DartboardEvaluator:
         
         return self.result[0].plot()
         
+    def ball_coordinate_detect(self, board:Board_Info, ball:Ball_Info):
+    
+        # ボード中心とボール中心のX座標の差分を計算
+        difference_x_coordinate =abs(board.x - ball.x)
+        # ボード中心とボール中心のY座標の差分を計算
+        difference_y_coordinate = abs(board.y - ball.y)
+        # 上記2つの長さから、三平方の定理を用いてrを計算
+        r = math.sqrt(difference_x_coordinate**2 + difference_y_coordinate**2)
+        # 上記で求めたrを、ボードの半径を用いて正規化
+        normalized_r = r / board.radius
+    
+        # 三角関数cosの値を求める (x -> 底辺 / r -> 斜辺)
+        cos_value = difference_x_coordinate / r 
+        # 上記で求めた値から、θを逆算(ラジアン出力)
+        θ = math.acos(cos_value)
+        #　上記で求めたθを、°に変換
+        θ_degree = math.degrees(θ)
 
+        # ボールが第2象限にある時
+        if   ((board.x > ball.x) and (board.y > ball.y)) :
+            θ_degree = 180 - θ_degree
+        # ボールが第3象限にある時
+        elif ((board.x > ball.x) and (board.y < ball.y)) :
+            θ_degree += 180 
+        # ボールが第4象限にある時
+        elif ((board.x < ball.x) and (board.y < ball.y)) : 
+            θ_degree = 360 - θ_degree
+        
+        polar_coordinate = Polar_Coordinate(normalized_r , θ_degree) 
 
-    def score_calculate(self, ball_distance:float, ball_radian:float) -> int:
+        return polar_coordinate
+
+    def score_calculate(self, polar_coordinate:Polar_Coordinate) -> int:
         """
         ball_distance: ボードの中心とダーツの距離 (0.0 ~ 1.0)
         ball_radian:   ボードの中心座標からダーツまでの角度[rad]  (0 ~ 360)
@@ -114,28 +191,19 @@ class DartboardEvaluator:
 
         score = 0
         # ダーツがボードの外にある場合
-        if ball_distance > 1.0:
+        if polar_coordinate.r > 1.0:
             return score
-        
-        # ball_radianが0~360の範囲に収まるようにする
-        if ball_radian < 0 or  ball_radian > 360:
-            ball_radian %= 360
         
         base_angle = float(360/self.board_circle_divisions) 
         
         for j in range(self.board_radius_divisions) :
-            if (self.board_each_circle_radius[j] <= ball_distance < self.board_each_circle_radius[j+1]) : # ダーツの位置を、rから判断
+            if (self.board_each_circle_radius[j] <= polar_coordinate.r < self.board_each_circle_radius[j+1]) : # ダーツの位置を、rから判断
                 # print("darts_distanceは{}番目の円の範囲にありました。" .format(j+1))  
             
                 for k in range(self.board_circle_divisions) : 
-                    if(base_angle * k <= ball_radian < base_angle * (k+1)) :  # ダーツの位置を、θから判断
+                    if(base_angle * k <= polar_coordinate.θ < base_angle * (k+1)) :  # ダーツの位置を、θから判断
                         # print("θは{}°以内の位置にありました。" .format(base_angle * (k+1)))
                         return self.board_score_table[j][k]          
 
         return score
-
-    def ball_coordinate_detect(self, board_bbox, ball_bbox):
-        ball_distance = 0
-        ball_radian = 0
-
-        return ball_distance, ball_radian
+    
