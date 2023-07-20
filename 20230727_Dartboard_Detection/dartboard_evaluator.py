@@ -66,7 +66,7 @@ class DartboardEvaluator:
         # ボードの情報
         self.board_radius_divisions:int = 3     # ボードの円の数
         self.board_circle_divisions:int = 12    # ボードの円の分割数
-        self.board_each_circle_radius:list[int] = [0, 0.2, 0.6, 1.0]   # ボードの各円の半径割合
+        self.board_each_circle_radius:list[int] = [0, 0.214, 0.677, 1.0]   # ボードの各円の半径割合
 
         # ボードの点数表
         score_table1 = [200]
@@ -178,8 +178,6 @@ class DartboardEvaluator:
             θ_degree = 360 - θ_degree
         
         polar_coordinate = Polar_Coordinate(normalized_r , θ_degree) 
-
-        print(polar_coordinate)
 
         return polar_coordinate
 
