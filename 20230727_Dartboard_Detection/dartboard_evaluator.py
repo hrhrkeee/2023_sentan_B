@@ -179,6 +179,8 @@ class DartboardEvaluator:
         
         polar_coordinate = Polar_Coordinate(normalized_r , θ_degree) 
 
+        print(polar_coordinate)
+
         return polar_coordinate
 
     def score_calculate(self, polar_coordinate:Polar_Coordinate) -> int:

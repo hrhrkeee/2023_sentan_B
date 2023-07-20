@@ -1,0 +1,11 @@
+path:  sentan-B
+train: train/images
+val:   valid/images
+test:  test/images
+
+nc: 3
+
+names:
+  0:
+  1: Ball
+  2: Board
